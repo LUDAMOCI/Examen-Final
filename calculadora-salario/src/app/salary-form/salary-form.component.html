@@ -28,7 +28,8 @@
   </mat-card-content>
 </mat-card>
 
-<mat-card *ngIf="result">
+<!-- Resultados -->
+<mat-card *ngIf="result" class="result-card">
   <mat-card-title>Resultados del Salario</mat-card-title>
   <mat-card-content>
     <p>Salario Regular: {{ result.regularSalary | currency }}</p>
