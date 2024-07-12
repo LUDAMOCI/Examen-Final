@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-title>Ingreso de Datos del Empleado</mat-card-title>
   <mat-card-content>
-    <form (ngSubmit)="onSubmit()" #salaryForm="ngForm">
+    <form (ngSubmit)="onSubmit(salaryForm)" #salaryForm="ngForm">
       <mat-form-field appearance="fill">
         <mat-label>Nombre del Empleado</mat-label>
         <input matInput placeholder="Nombre" name="name" ngModel required>
