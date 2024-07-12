@@ -27,3 +27,13 @@
     </form>
   </mat-card-content>
 </mat-card>
+
+<mat-card *ngIf="result">
+  <mat-card-title>Resultados del Salario</mat-card-title>
+  <mat-card-content>
+    <p>Salario Regular: {{ result.regularSalary | currency }}</p>
+    <p>Salario por Horas Extras: {{ result.overtimeSalary | currency }}</p>
+    <p>Deducciones: {{ result.deductions | currency }}</p>
+    <p>Salario Neto: {{ result.netSalary | currency }}</p>
+  </mat-card-content>
+</mat-card>
