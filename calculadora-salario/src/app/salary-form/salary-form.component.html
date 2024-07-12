@@ -1,1 +1,29 @@
-<p>salary-form works!</p>
+<mat-card>
+  <mat-card-title>Ingreso de Datos del Empleado</mat-card-title>
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()" #salaryForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre del Empleado</mat-label>
+        <input matInput placeholder="Nombre" name="name" ngModel required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Salario por Hora</mat-label>
+        <input matInput type="number" placeholder="Salario por Hora" name="hourlyWage" ngModel required min="0">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Trabajadas</mat-label>
+        <input matInput type="number" placeholder="Horas Trabajadas" name="hoursWorked" ngModel required min="0">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Horas Extras Trabajadas</mat-label>
+        <input matInput type="number" placeholder="Horas Extras Trabajadas" name="overtimeHours" ngModel required
+          min="0">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!salaryForm.form.valid">Calcular</button>
+    </form>
+  </mat-card-content>
+</mat-card>
