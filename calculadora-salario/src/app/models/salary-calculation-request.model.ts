@@ -1,0 +1,2 @@
+export interface SalaryCalculationRequest.model {
+}
